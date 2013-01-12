@@ -13,9 +13,11 @@ Installation and use
 Works for Python3. Requires dateutil package.
 
 Run the program without arguments to get some help:
+
     $ python3 collectorNNTP.py
 
 The program must be invoked by providing a project name:
+
     $ python3 collectorNNTP.py proj1
 
 It will then create directory ~/network-data-collector  for persisting the collected data as well as the program state (in case it is interrupted and re-started). It then uses yserial library (included with this distribution) to persist data into
@@ -26,6 +28,7 @@ to gmane server), username/password (leave empty if not used), and then optional
 groups on the server. At that stage you can enter one or more mail-group names, each on one line, ending with an empty line.
 If you use multiple mail-groups in a single data set, they will be treated as a single data set, but you may have the option
 of including mailgroup data in some of the data export alternatives.
+
     Starting setup of your project... 
     server (default: news.gmane.org) :
     port (default: 119) :
@@ -39,8 +42,11 @@ of including mailgroup data in some of the data export alternatives.
     Enter group name:gmane.politics.activism.buildacarfreecity
     Enter group name:
     Setup is completed.
+
 Once the setup is complete you can start ollecting data:
+
     $ python3 collectorNNTP.py proj1 collect
 
 Finally, you can export the dataset in one of supported formats, e.g. for Gephi GEXF format:
+
     $ python3 collectorNNTP.py proj1 dumpGEXF outfile.gexf
